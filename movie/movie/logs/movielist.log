@@ -1,0 +1,209 @@
+ERROR 2018-02-05 20:07:33,402 serializers serializers.py create 42 popularity_99 : This field should be floating value between 0 to 100.
+
+
+ERROR 2018-02-05 20:07:58,907 serializers serializers.py create 36 popularity_99 : This field is required.
+
+
+ERROR 2018-02-05 20:08:38,800 exception exception.py handle_uncaught_exception 124 Internal Server Error: /movieList/Charlies Angels
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 1554, in to_python
+    return decimal.Decimal(value)
+decimal.InvalidOperation: [<class 'decimal.ConversionSyntax'>]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Documents\pythonProgram\movie\movieList\views.py", line 71, in put
+    imdb_score=data['imdb_score'])
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 635, in update
+    rows = query.get_compiler(self.db).execute_sql(CURSOR)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1148, in execute_sql
+    cursor = super(SQLUpdateCompiler, self).execute_sql(result_type)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 824, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1112, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 1583, in get_db_prep_save
+    return connection.ops.adapt_decimalfield_value(self.to_python(value), self.max_digits, self.decimal_places)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 1559, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ["'' value must be a decimal number."]
+ERROR 2018-02-05 20:12:20,254 exception exception.py handle_uncaught_exception 124 Internal Server Error: /movieList/Charlies Angels
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Documents\pythonProgram\movie\movieList\views.py", line 71, in put
+    imdb_score=data['imdb_score'])
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 635, in update
+    rows = query.get_compiler(self.db).execute_sql(CURSOR)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1148, in execute_sql
+    cursor = super(SQLUpdateCompiler, self).execute_sql(result_type)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 824, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1112, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 1583, in get_db_prep_save
+    return connection.ops.adapt_decimalfield_value(self.to_python(value), self.max_digits, self.decimal_places)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\base\operations.py", line 495, in adapt_decimalfield_value
+    return utils.format_number(value, max_digits, decimal_places)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py", line 204, in format_number
+    value = value.quantize(decimal.Decimal(".1") ** decimal_places, context=context)
+decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+ERROR 2018-02-05 20:15:59,651 exception exception.py handle_uncaught_exception 124 Internal Server Error: /movieList/Charlies Angels
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Documents\pythonProgram\movie\movieList\views.py", line 71, in put
+    imdb_score=data['imdb_score'])
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\query.py", line 635, in update
+    rows = query.get_compiler(self.db).execute_sql(CURSOR)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1148, in execute_sql
+    cursor = super(SQLUpdateCompiler, self).execute_sql(result_type)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 824, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1112, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 1583, in get_db_prep_save
+    return connection.ops.adapt_decimalfield_value(self.to_python(value), self.max_digits, self.decimal_places)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\base\operations.py", line 495, in adapt_decimalfield_value
+    return utils.format_number(value, max_digits, decimal_places)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\db\backends\utils.py", line 204, in format_number
+    value = value.quantize(decimal.Decimal(".1") ** decimal_places, context=context)
+decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]
+ERROR 2018-02-05 20:22:34,598 exception exception.py handle_uncaught_exception 124 Internal Server Error: /movieList/Charlies Angels
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Documents\pythonProgram\movie\movieList\views.py", line 66, in put
+    if serilizer.is_valid():
+NameError: name 'serilizer' is not defined
+ERROR 2018-02-05 20:23:32,903 exception exception.py handle_uncaught_exception 124 Internal Server Error: /movieList/Charlies Angels
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Documents\pythonProgram\movie\movieList\views.py", line 66, in put
+    if serializer.is_valid():
+NameError: name 'serializer' is not defined
+ERROR 2018-02-05 20:30:03,301 exception exception.py handle_uncaught_exception 124 Internal Server Error: /movieList/Charlies Angels
+
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 454, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python36\lib\site-packages\rest_framework\views.py", line 491, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User\Documents\pythonProgram\movie\movieList\views.py", line 66, in put
+    result = MovieSerializer.to_internal_value(data)
+TypeError: to_internal_value() missing 1 required positional argument: 'data'
+ERROR 2018-02-05 20:31:08,975 serializers serializers.py to_internal_value 37 popularity_99 : This field should be floating value between 0 to 100.
+
+
+ERROR 2018-02-05 20:31:24,100 serializers serializers.py to_internal_value 31 popularity_99 : This field is required.
+
+
